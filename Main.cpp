@@ -276,7 +276,7 @@ class operations{
 				out<<ti<<" ";
 			}
 			else{
-				out<<now<<" ";
+				out<<now<<"";
 			}
 			out<<name<<endl;
 		}
@@ -290,7 +290,7 @@ class operations{
 			in>>ti;
 			getline(in,name);
 			out<<id<<" ";
-			out<<ti<<" ";
+			out<<ti<<"";
 			out<<name<<endl;
 			i++;
 		}
