@@ -36,7 +36,7 @@ class operations{
 	}
 	
 	void setUser(){
-		cout<<"**********Welcome to xyz gas service**********\n";
+		cout<<"**********Welcome to xyz gas service***********\n";
 		cout<<"  Enter your User Status"<<endl;
 		cout<<"\tEnter 1 for existing user\n";
 		cout<<"\tEnter 2 for new user\n";
