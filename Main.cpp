@@ -1,4 +1,3 @@
-//Changes made by Jagadish
 #include<stdio.h>
 #include<stdlib.h>
 #include<iostream>
