@@ -313,13 +313,15 @@ class operations{
 
 	int getIndex(int id){
 		int i=-1;
+		bool invalidId=true;
 		while(i<size){
 			i++;
 			if(id==users[i].id){
+				invalidId=false;
 				break;
 			}
 		}
-		return i;	
+		return invalidId?-1:i;
 	}
 
 	string getName(int id){
