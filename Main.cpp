@@ -273,7 +273,7 @@ class operations{
 			getline(in,name);
 			out<<id<<" ";
 			if(i!=ind){
-				out<<ti<<" ";
+				out<<ti<<"";
 			}
 			else{
 				out<<now<<"";
