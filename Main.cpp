@@ -24,12 +24,12 @@ struct customer{
 };
 
 class operations{
-	customer *p;
+	customer *users;
 	int size;
 	int lastIndex;
  public:
-	operations(customer *p,int size){
-		this->p=p;
+	operations(customer *users,int size){
+		this->users=users;
 		this->size=size;
 		this->lastIndex=size-1;;
 		setUser();
@@ -72,7 +72,7 @@ class operations{
 		getline(cin,name);
 		int newId;
 		if(size==0){ newId=1111; }
-		else{	newId=p[lastIndex].id+1; }
+		else{	newId=users[lastIndex].id+1; }
 		lastIndex++;
 		cout<<name<<", this is your new id "<<newId<<endl;
 		ofstream out;
@@ -80,9 +80,9 @@ class operations{
 		out<<newId<<" ";
 		out<<0<<" ";
 		out<<name<<endl;
-		p[lastIndex].id=newId;
-		p[lastIndex].name=name;
-		p[lastIndex].time=0;
+		users[lastIndex].id=newId;
+		users[lastIndex].name=name;
+		users[lastIndex].time=0;
 		size++;
 		out.close();
 	}
@@ -149,7 +149,7 @@ class operations{
 	void setBooking(int ind){
 		cout<<"-----------Welcome to Booking Section-----------"<<endl<<endl;
 		time_t now=time(0);
-		time_t prev=p[ind].time;
+		time_t prev=users[ind].time;
 		string ti;
 		double diff=difftime(now,prev);
 		diff=diff<0?-diff:diff;
@@ -296,7 +296,7 @@ class operations{
 		}
 		in.close();
 		out.close();
-		p[ind].time=now;
+		users[ind].time=now;
 	}	
 
 	void setComplaint(int ind){
@@ -306,7 +306,7 @@ class operations{
 		char wa;
 		cin>>wa;
 		getline(cin,complaint);
-		cout<<p[ind].name<<" sorry for the inconvinence, we will clear your request asap.\n";
+		cout<<users[ind].name<<" sorry for the inconvinence, we will clear your request asap.\n";
 		cout<<"************Thank you for using our service************\n";
 	}
 
@@ -315,7 +315,7 @@ class operations{
 		int i=-1;
 		while(i<size){
 			i++;
-			if(id==p[i].id){
+			if(id==users[i].id){
 				break;
 			}
 		}
@@ -328,7 +328,7 @@ class operations{
 		if(i==-1){
                         return "Invalid Id";
                 }
-		return p[i].name;
+		return users[i].name;
 	}
 };
 
