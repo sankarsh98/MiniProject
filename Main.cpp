@@ -307,7 +307,7 @@ class operations{
 		cin>>wa;
 		getline(cin,complaint);
 		cout<<users[ind].name<<" sorry for the inconvinence, we will clear your request asap.\n";
-		cout<<"************Thank you for using our service************\n";
+		cout<<"************Thank you for using our service************\n\n";
 	}
 
 
