@@ -233,7 +233,7 @@ class operations{
 		cout<<"*********Payment Successful*********\n";
 		cout<<"Successfully booked a gas, you will be receiving it by "<<ti;
                 cout<<"Your booking ID: "<<rand()<<endl<<endl;
-		cout<<"--------Thank you for using our service--------\n";
+		cout<<"--------Thank you for using our service--------\n\n";
 	}
 	
 	bool isValidDate(int month,int year){
