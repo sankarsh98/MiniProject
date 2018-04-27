@@ -76,7 +76,7 @@ class operations{
 		lastIndex++;
 		cout<<name<<", this is your new id "<<newId<<endl;
 		ofstream out;
-		out.open("files",ios::app);
+		out.open("record",ios::app);
 		out<<newId<<" ";
 		out<<0<<" ";
 		out<<name<<endl;
@@ -260,9 +260,9 @@ class operations{
 
 	void setTime(int ind,time_t now){
 		ofstream out;
-		out.open("ndates");
+		out.open("datebuffer");
 		ifstream in;
-		in.open("files");
+		in.open("record");
 		int i=-1;
 		int id,ti;
 		string name;
@@ -282,8 +282,8 @@ class operations{
 		}
 		out.close();
 		in.close();
-		out.open("files");
-		in.open("ndates");
+		out.open("record");
+		in.open("datebuffer");
 		i=0;
 		while(i<size){
 			in>>id;
@@ -334,7 +334,7 @@ class operations{
 
 int main(){
 	customer c[100];
-	ifstream in("files");
+	ifstream in("record");
 	int i=0;
 	while(in>>c[i].id){
 		in>>c[i].time;
